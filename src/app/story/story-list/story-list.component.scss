@@ -1,0 +1,22 @@
+.story_list {
+  width: 600px;
+  margin: 15px;
+  border: 1px solid #181111;
+  padding: 13px;
+  border-radius: 14px;
+  .story_info {
+    button {
+      cursor: pointer;
+    }
+    display: flex;
+    justify-content: center;
+    margin: 9px;
+    flex-direction: column;
+    .author {
+      margin: auto;
+    }
+    .time {
+      margin: auto;
+    }
+  }
+}

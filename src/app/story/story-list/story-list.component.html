@@ -1,0 +1,10 @@
+<div class="story_list">
+  <a [href]="story.url">{{ story.title }}</a>
+  <div class="story_info">
+    <div class="author">author:{{ story.by }}</div>
+    <div class="time">create time:{{ story.time | toShamsiDate }}</div>
+    <button mat-button color="primary" (click)="openDialog()">
+      top 3 comments
+    </button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="comment">
+  <ul *ngFor="let item of comments$ | async">
+    <li>
+      <p>{{ item.by }}</p>
+      {{ item.text }}
+    </li>
+  </ul>
+</div>
