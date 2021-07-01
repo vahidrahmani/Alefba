@@ -1,17 +1,13 @@
 <h1 *ngIf="error" style="color: brown">{{ error }}</h1>
 
-<div class="story">
+<div fxLayout="column" fxLayoutAlign="center">
   <div *ngIf="loading">
     <mat-spinner></mat-spinner>
   </div>
-
-  <mat-list class="app-class">
-    <mat-list-item role="listitem" *ngFor="let item of storis$ | async">
-      <p *ngIf="isString(item)">{{ item }}</p>
-
-      <div *ngIf="!isString(item)">
-        <app-story-list [story]="item"></app-story-list>
-      </div>
-    </mat-list-item>
-  </mat-list>
+  <div *ngFor="let item of storis$ | async">
+    <div *ngIf="isString(item)">{{ item }}</div>
+    <div *ngIf="!isString(item)" fxLayout fxLayoutAlign="center">
+      <app-story-list [story]="item"></app-story-list>
+    </div>
+  </div>
 </div>
