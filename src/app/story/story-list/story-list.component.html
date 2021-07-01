@@ -1,10 +1,18 @@
-<div class="story_list">
-  <a [href]="story.url">{{ story.title }}</a>
+<div
+  fxLayout="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="30px"
+  class="story_list"
+>
   <div class="story_info">
+    <div>
+      <a [href]="story.url">{{ story.title }}</a>
+    </div>
     <div class="author">author:{{ story.by }}</div>
     <div class="time">create time:{{ story.time | toShamsiDate }}</div>
-    <button mat-button color="primary" (click)="openDialog()">
-      top 3 comments
-    </button>
   </div>
+
+  <button mat-button color="primary" (click)="openDialog()">
+    top 3 comments
+  </button>
 </div>

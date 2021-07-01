@@ -1,10 +1,10 @@
 .story_list {
-  width: 600px;
   margin: 15px;
   border: 1px solid #181111;
   padding: 13px;
   border-radius: 14px;
   .story_info {
+    width: 600px;
     button {
       cursor: pointer;
     }
@@ -17,6 +17,17 @@
     }
     .time {
       margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .story_list {
+    margin: 10px;
+    border: 1px solid #181111;
+    padding: 9px;
+    border-radius: 10px;
+    .story_info {
+      width: 200px;
     }
   }
 }
